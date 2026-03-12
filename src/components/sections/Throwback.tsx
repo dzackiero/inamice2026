@@ -1,13 +1,11 @@
-"use client";
-
 import React from 'react';
-import { motion } from 'motion/react';
 import { THROWBACK_EVENTS } from '../../constants';
 import { Settings, Globe, Leaf } from 'lucide-react';
+import AnimatedCard from '../ui/AnimatedCard';
+
+const icons = [<Settings key="settings" size={48} />, <Globe key="globe" size={48} />, <Leaf key="leaf" size={48} />];
 
 const Throwback = () => {
-    const icons = [<Settings size={48} />, <Globe size={48} />, <Leaf size={48} />];
-
     return (
         <section id="about" className="relative pt-44 sm:pt-32 md:pt-24 text-white bg-gradient-to-b from-inamice-blue to-white">
             <div className="relative z-10 section-container px-4">
@@ -21,10 +19,10 @@ const Throwback = () => {
                     <div className="lg:w-2/3">
                         <p className="text-lg md:text-xl leading-relaxed opacity-95 text-justify font-medium">
                             As an annual platform, INAMICE fosters collaboration between government, industry,
-                            associations, and academic institutions to strengthen Indonesia’s MICE ecosystem.
+                            associations, and academic institutions to strengthen Indonesia's MICE ecosystem.
                             Each year, INAMICE adopts themes and discussions that reflect the most relevant and
                             emerging issues in the MICE industry, ensuring that the forum delivers meaningful
-                            insights, practical dialogue, and real impact for the development of Indonesia’s MICE
+                            insights, practical dialogue, and real impact for the development of Indonesia's MICE
                             ecosystem.                        </p>
                     </div>
                 </div>
@@ -32,12 +30,9 @@ const Throwback = () => {
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {THROWBACK_EVENTS.map((event, idx) => (
-                        <motion.div
+                        <AnimatedCard
                             key={event.year}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
+                            index={idx}
                             className="group relative rounded-2xl overflow-hidden border-[6px] border-inamice-orange bg-black aspect-[3/4] shadow-xl"
                         >
                             <img
@@ -57,10 +52,10 @@ const Throwback = () => {
                                     {event.title}
                                 </h3>
                                 <p className="text-white text-sm md:text-base drop-shadow-lg font-medium leading-relaxed text-left max-w-[90%]">
-                                    "{event.theme}"
+                                    &quot;{event.theme}&quot;
                                 </p>
                             </div>
-                        </motion.div>
+                        </AnimatedCard>
                     ))}
                 </div>
             </div>

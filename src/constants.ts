@@ -8,20 +8,18 @@ export const COLORS = {
 };
 
 export const NAVIGATION = [
-  { name: "About", href: "#about" },
+  { name: "About", href: "/" },
   {
     name: "INAMICE 2026",
-    href: "#inamice-2026",
+    href: "/inamice-2026",
     subItems: [
-      { name: "Towards INAMICE 2026", href: "#towards" },
-      { name: "Pre-Event", href: "#pre-event" },
-      { name: "Main Event", href: "#main-event" },
-      { name: "Awarding Session", href: "#awarding" },
+      { name: "Main Event", href: "/inamice-2026/main-event" },
+      { name: "Awarding Session", href: "/inamice-2026/awarding-session" },
     ]
   },
-  { name: "Article", href: "#articles" },
-  { name: "More", href: "#more" },
-  { name: "Registration", href: "#registration", isButton: true },
+  { name: "Article", href: "/article" },
+  { name: "More", href: "/more" },
+  { name: "Registration", href: "/registration", isButton: true },
 ];
 
 export const THROWBACK_EVENTS = [
@@ -56,42 +54,42 @@ export const SPEAKERS = [
   {
     name: "RIZKI HANDAYANI MUSTAFA",
     role: "Deputy for Industry and Investment, Ministry of Tourism of the Republic of Indonesia",
-    topic: "Positioning MICE as an Economic Asset in Urban Development",
+    topic: "Understanding Digital Transformation as the Foundation of Smart Economy",
     type: "PLENARY SESSION 1",
     image: "/img/rizky-handayani.jpg",
   },
   {
     name: "CYRIL RAOUL HAKIM",
     role: "Special Staff to the Governor of DKI Jakarta",
-    topic: "Aligning Policy Enablers with the Needs of the MICE Industry",
+    topic: "Translating Smart Economy Vision Into Strategic Sector Direction",
     type: "PLENARY SESSION 1",
     image: "/img/cyril-raoul.jpg",
   },
   {
     name: "MICHAEL BAYU A. S.",
     role: "Sales Director, Dyandra Promosindo",
-    topic: "Understanding Industry Realities: Challenges and Digital Transformation Opportunities in the MICE Ecosystem",
+    topic: "Defining Smart Economy Metrics: Indicators and the Economic Contributions of MICE",
     type: "PLENARY SESSION 1",
     image: "/img/michael-bayu.jpg",
   },
   {
     name: "DEDY SAHAT",
     role: "EVP - Head of Digital Economy, CIMB Niaga",
-    topic: "Applying Financial Technology to Enable Smart Economy in MICE Practices",
+    topic: "Understanding Industry Realities and Digital Transformation Opportunities in the MICE Ecosystem",
     type: "PLENARY SESSION 2",
     image: "/img/dedy-sahat.jpg",
   },
   {
     name: "MR. CHI CHUAN POH",
     role: "Executive Director, Singapore Tourism Board (STB)",
-    topic: "Benchmarking Global Smart MICE Practices to Shape Jakarta's Future Direction",
+    topic: "Implementing Financial and Digital Transformation in MICE Practices",
     type: "PLENARY SESSION 2",
     image: "/img/chi-chuan-poh.jpg"
   },
   {
     name: "TBA",
     role: "Jakarta Smart City Representative",
-    topic: "Implementing Digital Payment Technologies as the Foundation of Smart Economy",
+    topic: "Benchmarking Thailand’s National MICE Governance Model to Strengthen Jakarta’s Strategic Direction",
     type: "PLENARY SESSION 2",
     image: "/img/speakers/tba.png"
   },

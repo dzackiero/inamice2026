@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { NAVIGATION } from '../../constants';
 import InamiceLogo from '../ui/InamiceLogo';
 
@@ -12,7 +14,7 @@ const Navbar = () => {
     const lastScrollY = useRef(0);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-    const [activeSection, setActiveSection] = useState('About');
+    const pathname = usePathname() || '/';
 
     useEffect(() => {
         let ticking = false;
@@ -22,7 +24,6 @@ const Navbar = () => {
                 window.requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
 
-                    // Existing navbar hide/show logic
                     if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
                         setIsHidden(prev => prev !== true ? true : prev);
                     } else {
@@ -35,26 +36,6 @@ const Navbar = () => {
                     });
 
                     lastScrollY.current = currentScrollY;
-
-                    // Active section tracking
-                    const sections = NAVIGATION.map(item => {
-                        const id = item.href.replace('#', '');
-                        const element = document.getElementById(id);
-                        if (element) {
-                            return { name: item.name, offset: element.offsetTop - 150 };
-                        }
-                        return null;
-                    }).filter(Boolean);
-
-                    const scrollPosition = window.scrollY;
-                    const currentSection = sections!.reduce((acc, section) => {
-                        if (scrollPosition >= section!.offset) {
-                            return section!.name;
-                        }
-                        return acc;
-                    }, 'About');
-
-                    setActiveSection(prev => prev !== currentSection ? currentSection : prev);
                     ticking = false;
                 });
                 ticking = true;
@@ -65,11 +46,20 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const isActive = (href: string) => {
+        if (href === '/') {
+            return pathname === '/';
+        }
+        return pathname.startsWith(href);
+    };
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow-md py-3' : 'bg-transparent py-6'} ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}>
             <div className="max-w-10xl mx-auto px-6 md:px-12 flex justify-between items-center">
                 {/* Logo */}
-                <InamiceLogo theme="light" size="sm" />
+                <Link href="/">
+                    <InamiceLogo theme="light" size="sm" />
+                </Link>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-10">
@@ -80,15 +70,15 @@ const Navbar = () => {
                             onMouseEnter={() => item.subItems && setActiveDropdown(item.name)}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
-                            <a
+                            <Link
                                 href={item.href}
-                                className={`text-[15px] font-bold transition-all whitespace-nowrap ${activeSection === item.name
+                                className={`text-[15px] font-bold transition-all whitespace-nowrap ${isActive(item.href)
                                     ? 'bg-brand-active-bg text-brand-blue px-6 py-2 rounded-full'
                                     : 'text-brand-blue hover:text-brand-orange'
                                     }`}
                             >
                                 {item.name}
-                            </a>
+                            </Link>
 
                             {/* Dropdown Menu */}
                             <AnimatePresence>
@@ -102,13 +92,13 @@ const Navbar = () => {
                                     >
                                         <div className="flex flex-col">
                                             {item.subItems.map((sub, idx) => (
-                                                <a
+                                                <Link
                                                     key={idx}
                                                     href={sub.href}
                                                     className="px-6 py-3 text-brand-blue hover:text-brand-orange font-bold text-sm transition-colors rounded-lg hover:bg-brand-blue/5"
                                                 >
                                                     {sub.name}
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </motion.div>
@@ -153,24 +143,24 @@ const Navbar = () => {
                     >
                         {NAVIGATION.map((item) => (
                             <div key={item.name} className="flex flex-col gap-2">
-                                <a
+                                <Link
                                     href={item.href}
                                     onClick={() => !item.subItems && setIsMobileMenuOpen(false)}
-                                    className={`text-base font-bold p-2 ${item.name === 'About' ? 'text-brand-orange px-6 py-2 bg-brand-active-bg rounded-full w-fit' : 'text-brand-blue'}`}
+                                    className={`text-base font-bold p-2 ${isActive(item.href) ? 'text-brand-orange px-6 py-2 bg-brand-active-bg rounded-full w-fit' : 'text-brand-blue'}`}
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                                 {item.subItems && (
                                     <div className="flex flex-col gap-3 pl-6 mt-1">
                                         {item.subItems.map((sub, idx) => (
-                                            <a
+                                            <Link
                                                 key={idx}
                                                 href={sub.href}
                                                 onClick={() => setIsMobileMenuOpen(false)}
                                                 className="text-brand-blue/80 font-bold text-sm"
                                             >
                                                 {sub.name}
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 )}

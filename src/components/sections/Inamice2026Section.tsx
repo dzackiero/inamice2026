@@ -8,13 +8,14 @@ const Inamice2026Section = () => {
             {/* 1. Intro Section with Blue Background */}
             <div className="relative py-12 md:py-20">
                 {/* Background Image & Overlay */}
-                <div className="absolute inset-2 md:inset-x-8 md:inset-y-4 z-0 rounded-t-[2rem] md:rounded-t-[3rem] overflow-hidden">
+                <div className="absolute inset-2 md:inset-x-8 md:inset-y-4 z-0 rounded-t-[2rem] md:rounded-t-[3rem] overflow-hidden bg-inamice-blue/10">
                     <Image
                         src="/img/img207.jpg"
                         alt="Jakarta Background"
                         fill
                         className="object-cover"
                         quality={80}
+                        priority
                     />
                     {/* Subtle Blue Nuance Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-b from-inamice-blue/60 to-transparent" />
@@ -41,6 +42,7 @@ const Inamice2026Section = () => {
                                         fill
                                         className="object-cover"
                                         sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
                                     />
                                 </div>
                             </div>

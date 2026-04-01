@@ -6,7 +6,7 @@ const InamiceLogo = ({ theme = 'light', size = 'sm' }: { theme?: 'light' | 'dark
     const containerClasses = {
         sm: 'h-14 md:h-16 w-auto',
         lg: 'h-24 md:h-32 w-auto',
-        xl: 'w-full max-w-[320px] sm:max-w-[480px] md:max-w-[700px] lg:max-w-[850px] flex justify-center'
+        xl: 'w-full max-w-[240px] sm:max-w-[340px] md:max-w-[480px] lg:max-w-[580px] flex justify-center'
     };
 
     return (

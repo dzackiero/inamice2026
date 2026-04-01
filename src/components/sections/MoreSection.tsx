@@ -28,14 +28,14 @@ const MoreSection = () => {
                 {/* Background Pattern / Watermark could go here */}
 
                 {/* Top Gradient Box that hosts everything */}
-                <div className="w-full relative px-4 md:px-8 flex flex-col items-center bg-gradient-to-b from-[#7CA8E8]/70 via-[#e2ebf7]/40 to-white pt-16 pb-24 border-t-4 border-[#7CA8E8]/50 shadow-[inset_0_20px_40px_-20px_rgba(0,0,0,0.1)]">
+                <div className="w-full relative px-4 md:px-8 flex flex-col items-center bg-gradient-to-b from-[#7CA8E8]/70 via-[#e2ebf7]/40 to-white pt-16 pb-24 border-t-4 border-[#7CA8E8]/50 overflow-hidden">
 
-                    {/* Motif Ornaments */}
-                    <div className="absolute top-10 left-4 md:left-20 opacity-10 pointer-events-none hidden md:block">
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-64 h-64 object-contain mix-blend-multiply" />
+                    {/* Motif Ornaments - Top Left & Bottom Right, No Opacity, No Margin */}
+                    <div className="absolute top-0 left-0 pointer-events-none">
+                        <img src="/img/acc_contact.png" alt="ornament" className="w-52 h-52 md:w-96 md:h-96 object-contain" />
                     </div>
-                    <div className="absolute bottom-10 right-4 md:right-20 opacity-10 pointer-events-none hidden md:block">
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-80 h-80 object-contain mix-blend-multiply" />
+                    <div className="absolute bottom-0 right-0 pointer-events-none">
+                        <img src="/img/acc_contact.png" alt="ornament" className="w-52 h-52 md:w-96 md:h-96 object-contain -scale-100" />
                     </div>
 
                     {/* Flex Container for Hosted & Organized */}

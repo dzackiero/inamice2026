@@ -1,9 +1,13 @@
 import React from 'react';
 import { THROWBACK_EVENTS } from '../../constants';
-import { Settings, Globe, Leaf, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import AnimatedCard from '../ui/AnimatedCard';
 
-const icons = [<Settings key="settings" size={48} />, <Globe key="globe" size={48} />, <Leaf key="leaf" size={48} />];
+const icons = [
+    "/icon-materi/6th_inamice_2023.png",
+    "/icon-materi/7th_inamice_2024.png",
+    "/icon-materi/8th_inamice_2025.png"
+];
 
 const Throwback = () => {
     return (
@@ -51,8 +55,12 @@ const Throwback = () => {
                                     {/* Original Blue Gradient Overlay from Left */}
                                     <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue/90 via-inamice-blue/60 to-transparent p-8 flex flex-col justify-center items-start">
                                         {/* Icon at Top Left of Text Area */}
-                                        <div className="text-white mb-6 opacity-90">
-                                            {icons[idx]}
+                                        <div className="mb-6 opacity-90">
+                                            <img
+                                                src={icons[idx]}
+                                                alt={`${event.title} icon`}
+                                                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                                            />
                                         </div>
 
                                         <h3 className="text-2xl md:text-3xl drop-shadow-lg font-bold text-white mb-3 leading-tight text-left">

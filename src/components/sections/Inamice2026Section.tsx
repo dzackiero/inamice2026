@@ -177,31 +177,27 @@ const Inamice2026Section = () => {
                 </div>
 
                 {/* Bottom Images in Arches */}
-                <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-10 max-w-5xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-10 max-w-6xl mx-auto">
                     {/* Arion Suites Kemang Image */}
-                    <div className="h-[200px] sm:h-[300px] md:h-[450px] rounded-t-full p-[3px] bg-gradient-to-r from-inamice-blue to-inamice-orange shadow-lg w-full">
-                        <div className="w-full h-full rounded-t-[calc(9999px-3px)] overflow-hidden relative">
-                            <Image
-                                src="/img/section-inamice.jpg"
-                                alt="Arion Suites Kemang"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 50vw, 50vw"
-                            />
-                        </div>
+                    <div className="h-[200px] sm:h-[300px] md:h-[615px] w-full overflow-hidden relative">
+                        <Image
+                            src="/img/venue.webp"
+                            alt="Arion Suites Kemang"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 50vw, 50vw"
+                        />
                     </div>
 
                     {/* Diamond Ballroom Image */}
-                    <div className="h-[200px] sm:h-[300px] md:h-[450px] rounded-t-full p-[3px] bg-gradient-to-r from-inamice-blue to-inamice-orange shadow-lg w-full">
-                        <div className="w-full h-full rounded-t-[calc(9999px-3px)] overflow-hidden relative">
-                            <Image
-                                src="/img/section-awarding.jpg"
-                                alt="Diamond Ballroom"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 50vw, 50vw"
-                            />
-                        </div>
+                    <div className="h-[200px] sm:h-[300px] md:h-[615px] w-full overflow-hidden relative">
+                        <Image
+                            src="/img/venue2.webp"
+                            alt="Diamond Ballroom"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 50vw, 50vw"
+                        />
                     </div>
                 </div>
             </div>

@@ -28,10 +28,8 @@ const Hero = () => {
                     {/* Content */}
                     <div className="relative z-10 w-full max-w-5xl mx-auto px-4 flex flex-col items-center justify-center pt-24 pb-32">
 
-                        <div className="flex justify-center w-full mb-8 sm:mb-10 mt-8 sm:mt-12 md:mt-0 relative overflow-visible">
-                            <div className="p-2 sm:p-4 md:p-8 w-full max-w-full flex justify-center">
-                                <InamiceLogo theme="white" size="xl" />
-                            </div>
+                        <div className="flex justify-center w-full mb-4 sm:mb-6 md:mb-8 mt-12 sm:mt-16 md:mt-0 relative overflow-visible px-4">
+                            <InamiceLogo theme="white" size="xl" />
                         </div>
 
                         <div className="text-lg md:text-2xl font-bold mb-4 sm:mb-8 text-white tracking-wide px-6 py-2">

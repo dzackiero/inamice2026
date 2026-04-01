@@ -8,10 +8,8 @@ const Articles = () => {
 
                 {/* Section Header */}
                 <div className="flex flex-col items-center mb-10 md:mb-16">
-                    <div className="flex items-center gap-1 mb-2">
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-6 h-6 object-contain mix-blend-multiply" />
-                        <img src="/img/acc-orange.jpg" alt="ornament" className="w-4 h-4 object-contain mix-blend-multiply" />
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-6 h-6 object-contain mix-blend-multiply" />
+                    <div className="flex items-center mb-2">
+                        <img src="/img/acc-fusion.png" alt="ornament" className="w-20 md:w-28 h-auto object-contain" />
                     </div>
                     <div className="bg-inamice-orange text-white px-10 py-2 w-full max-w-sm text-center">
                         <h2 className="text-xl font-bold uppercase tracking-widest">ARTICLES</h2>

@@ -64,10 +64,8 @@ const Inamice2026Section = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
                 {/* Decorative Header */}
                 <div className="flex flex-col items-center mb-8 md:mb-12">
-                    <div className="flex items-center gap-1 mb-2">
-                        <Image src="/img/acc-blue.jpg" alt="ornament" width={24} height={24} className="object-contain mix-blend-multiply" />
-                        <Image src="/img/acc-orange.jpg" alt="ornament" width={16} height={16} className="object-contain mix-blend-multiply" />
-                        <Image src="/img/acc-blue.jpg" alt="ornament" width={24} height={24} className="object-contain mix-blend-multiply" />
+                    <div className="flex items-center mb-2">
+                        <img src="/img/acc-fusion.png" alt="ornament" className="w-20 md:w-28 h-auto object-contain" />
                     </div>
                     <div className="bg-inamice-orange text-white px-8 py-2 w-full max-w-md text-center">
                         <h3 className="text-lg md:text-xl font-bold uppercase tracking-widest">WHY THIS THEME MATTERS</h3>
@@ -147,10 +145,8 @@ const Inamice2026Section = () => {
                 {/* Decorative Header (Side-by-side Ornaments) */}
                 <div className="flex items-center justify-center gap-2 md:gap-6 mb-10 md:mb-16">
                     {/* Left Ornaments */}
-                    <div className="flex items-center gap-0.5 md:gap-1 flex-shrink-0">
-                        <Image src="/img/acc-blue.jpg" alt="ornament" width={20} height={20} className="w-4 h-4 md:w-6 md:h-6 object-contain mix-blend-multiply" />
-                        <Image src="/img/acc-orange.jpg" alt="ornament" width={14} height={14} className="w-3 h-3 md:w-4 md:h-4 object-contain mix-blend-multiply" />
-                        <Image src="/img/acc-blue.jpg" alt="ornament" width={20} height={20} className="w-4 h-4 md:w-6 md:h-6 object-contain mix-blend-multiply" />
+                    <div className="flex items-center flex-shrink-0">
+                        <img src="/img/acc-fusion.png" alt="ornament" className="w-20 md:w-32 h-auto object-contain" />
                     </div>
 
                     {/* Orange Bar (Lengthened) */}
@@ -159,10 +155,8 @@ const Inamice2026Section = () => {
                     </div>
 
                     {/* Right Ornaments */}
-                    <div className="flex items-center gap-0.5 md:gap-1 flex-shrink-0">
-                        <Image src="/img/acc-blue.jpg" alt="ornament" width={20} height={20} className="w-4 h-4 md:w-6 md:h-6 object-contain mix-blend-multiply" />
-                        <Image src="/img/acc-orange.jpg" alt="ornament" width={14} height={14} className="w-3 h-3 md:w-4 md:h-4 object-contain mix-blend-multiply" />
-                        <Image src="/img/acc-blue.jpg" alt="ornament" width={20} height={20} className="w-4 h-4 md:w-6 md:h-6 object-contain mix-blend-multiply" />
+                    <div className="flex items-center flex-shrink-0">
+                        <img src="/img/acc-fusion.png" alt="ornament" className="w-20 md:w-32 h-auto object-contain" />
                     </div>
                 </div>
 

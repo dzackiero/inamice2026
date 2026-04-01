@@ -7,18 +7,14 @@ const MoreSection = () => {
             {/* Contact Area with separate background */}
             <div className="mx-2 sm:mx-4 md:mx-12 bg-gradient-to-t from-[#7CA8E8]/40 to-white pt-10 md:pt-16 pb-8 md:pb-12 mb-10 md:mb-16 flex flex-col items-center rounded-b-[2rem] md:rounded-b-[5rem] shadow-sm">
                 <div className="flex flex-col items-center justify-center px-4">
-                    <div className="flex items-center gap-1 mb-5">
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-6 h-6 object-contain mix-blend-multiply" />
-                        <img src="/img/acc-orange.jpg" alt="ornament" className="w-4 h-4 object-contain mix-blend-multiply" />
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-6 h-6 object-contain mix-blend-multiply" />
+                    <div className="flex items-center mb-5">
+                        <img src="/img/acc-fusion.png" alt="ornament" className="w-20 md:w-28 h-auto object-contain" />
                     </div>
                     <div className="bg-[#1e48cb] text-white px-12 py-3 w-fit text-center shadow-lg">
                         <h2 className="text-xl md:text-2xl font-black uppercase tracking-widest drop-shadow-sm">CONTACT</h2>
                     </div>
-                    <div className="flex items-center gap-1 mt-5">
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-6 h-6 object-contain mix-blend-multiply" />
-                        <img src="/img/acc-orange.jpg" alt="ornament" className="w-4 h-4 object-contain mix-blend-multiply" />
-                        <img src="/img/acc-blue.jpg" alt="ornament" className="w-6 h-6 object-contain mix-blend-multiply" />
+                    <div className="flex items-center mt-5">
+                        <img src="/img/acc-fusion.png" alt="ornament" className="w-20 md:w-28 h-auto object-contain" />
                     </div>
                 </div>
             </div>

@@ -138,38 +138,38 @@ const MoreSection = () => {
                         {
                             title: "Strategic Industry Exposure",
                             desc: "Engage directly with key decision-makers, regulators, industry leaders, and professionals from across the MICE, economic, and financial sectors in a highly targeted environment.",
-                            icon: <Users className="text-white w-8 h-8" />
+                            icon: "/icon-materi/strategic_industry_exposure.png"
                         },
                         {
                             title: "Integrated Brand Visibility",
                             desc: "Gain strong brand exposure through logo placement across official event materials, website, social media content, on-site visuals, and post-event publications.",
-                            icon: <Layout className="text-white w-8 h-8" />
+                            icon: "/icon-materi/integrated_brand_visibility.png"
                         },
                         {
                             title: "Thought Leadership & Brand Positioning",
                             desc: "Position your brand as an industry leader through speaking opportunities, panel discussions, workshops, and participation in Smart MICE and Smart Economy conversations.",
-                            icon: <Award className="text-white w-8 h-8" />
+                            icon: "/icon-materi/thought_leadership_brand_positioning.png"
                         },
                         {
                             title: "Digital & Media Amplification",
                             desc: "Maximize reach through INAMICE's digital marketing campaigns, social media promotions, podcast features, and extensive media partner coverage.",
-                            icon: <Megaphone className="text-white w-8 h-8" />
+                            icon: "/icon-materi/digital_media_amplification.png"
                         },
                         {
                             title: "On-Site Brand Activation",
                             desc: "Enhance audience engagement through interactive booths, brand activations, games, and experiential marketing activities during the event.",
-                            icon: <Store className="text-white w-8 h-8" />
+                            icon: "/icon-materi/on_site_brand_activation.png"
                         },
                         {
                             title: "Alignment with Smart MICE Vision",
                             desc: "Strengthen brand credibility by aligning with INAMICE 2026's Smart MICE positioning, focusing on innovation, sustainability, digitalization, and inclusive economic growth.",
-                            icon: <Compass className="text-white w-8 h-8" />
+                            icon: "/icon-materi/alignment_with_smart_mice_vision.png"
                         }
                     ].map((benefit, idx) => (
                         <div key={idx} className="group relative p-[3px] bg-gradient-to-b from-inamice-blue to-inamice-orange rounded-tr-[2rem] rounded-bl-[2rem] md:rounded-tr-[3.5rem] md:rounded-bl-[3.5rem] shadow-md hover:shadow-xl transition-all duration-300">
                             <div className="bg-white rounded-tr-[calc(2rem-3px)] rounded-bl-[calc(2rem-3px)] md:rounded-tr-[calc(3.5rem-3px)] md:rounded-bl-[calc(3.5rem-3px)] p-4 sm:p-5 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-8 h-full text-center md:text-left">
-                                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 bg-[#164CDE] rounded-xl flex items-center justify-center">
-                                    {benefit.icon}
+                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 bg-[#164CDE] rounded-xl flex items-center justify-center p-2 md:p-3">
+                                    <img src={benefit.icon} alt={benefit.title} className="w-full h-full object-contain" />
                                 </div>
                                 <div className="flex flex-col">
                                     <h3 className="text-[#164CDE] text-base sm:text-lg md:text-2xl font-black mb-1 md:mb-2 leading-tight uppercase tracking-tight">{benefit.title}</h3>
@@ -184,8 +184,8 @@ const MoreSection = () => {
 
                 {/* Final CTA */}
                 <div className="mt-14 md:mt-24 px-4 flex flex-col items-center group cursor-pointer w-full text-center">
-                    <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 bg-white px-6 md:px-8 py-4 md:py-5 rounded-3xl md:rounded-full shadow-[0_10px_40px_-10px_rgba(2,5,72,0.15)] group-hover:shadow-[0_15px_50px_-10px_rgba(2,5,72,0.25)] transition-all duration-300 group-hover:-translate-y-1 w-full max-w-sm sm:max-w-max justify-center">
-                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1e48cb] rounded-full flex items-center justify-center text-white shadow-lg flex-shrink-0">
+                    <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 bg-white px-6 md:px-8 py-4 md:py-5 rounded-3xl md:rounded-full transition-all duration-300 group-hover:-translate-y-1 w-full max-w-sm sm:max-w-max justify-center border border-inamice-blue/10">
+                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1e48cb] rounded-full flex items-center justify-center text-white flex-shrink-0">
                             <Phone size={24} fill="currentColor" />
                         </div>
                         <span className="text-[#1e48cb] text-base sm:text-lg md:text-xl font-bold tracking-wide leading-tight">Contact Our Sponsorship Team</span>
@@ -218,33 +218,33 @@ const MoreSection = () => {
                         {
                             title: "Exclusive Content Collaboration",
                             desc: "Access exclusive event content including conferences, panel discussions, interviews, and industry insights for publication across media channels.",
-                            icon: <MonitorPlay className="text-white w-8 h-8" />
+                            icon: "/icon-materi/exclusive_content_collaboration.png"
                         },
                         {
                             title: "Brand Visibility Across Platforms",
                             desc: "Receive logo placement on INAMICE's official website, social media channels, digital publications, and on-site promotional materials.",
-                            icon: <Eye className="text-white w-8 h-8" />
+                            icon: "/icon-materi/brand_visibility_across_platforms.png"
                         },
                         {
                             title: "Public Relations & Press Exposure",
                             desc: "Participate in press conferences, media briefings, and official press releases to enhance media credibility and audience reach.",
-                            icon: <Share2 className="text-white w-8 h-8" />
+                            icon: "/icon-materi/public_relations_press_exposure.png"
                         },
                         {
                             title: "Thought Leadership & Knowledge Sharing",
                             desc: "Collaborate in distributing educational and thought leadership content related to Smart MICE, Smart Economy, and the MICE industry.",
-                            icon: <Lightbulb className="text-white w-8 h-8" />
+                            icon: "/icon-materi/thought_leadership_knowledge_sharing.png"
                         },
                         {
                             title: "Long-Term Industry Positioning",
                             desc: "Strengthen your media brand's positioning as a trusted partner in Indonesia's MICE, tourism, and economic development ecosystem.",
-                            icon: <History className="text-white w-8 h-8" />
+                            icon: "/icon-materi/long_term_industry_positioning.png"
                         }
                     ].map((benefit, idx) => (
                         <div key={idx} className="group relative p-[3px] bg-gradient-to-b from-inamice-blue to-inamice-orange rounded-tr-[2rem] rounded-bl-[2rem] md:rounded-tr-[3.5rem] md:rounded-bl-[3.5rem] shadow-md hover:shadow-xl transition-all duration-300">
                             <div className="bg-white rounded-tr-[calc(2rem-3px)] rounded-bl-[calc(2rem-3px)] md:rounded-tr-[calc(3.5rem-3px)] md:rounded-bl-[calc(3.5rem-3px)] p-4 sm:p-5 md:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-8 h-full text-center sm:text-left">
-                                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 bg-[#164CDE] rounded-xl flex items-center justify-center">
-                                    {benefit.icon}
+                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 bg-[#164CDE] rounded-xl flex items-center justify-center p-2 md:p-3">
+                                    <img src={benefit.icon} alt={benefit.title} className="w-full h-full object-contain" />
                                 </div>
                                 <div className="flex flex-col">
                                     <h3 className="text-[#164CDE] text-base sm:text-lg md:text-2xl font-black mb-1 md:mb-2 leading-tight uppercase tracking-tight">{benefit.title}</h3>
@@ -259,8 +259,8 @@ const MoreSection = () => {
 
                 {/* Final CTA */}
                 <div className="mt-14 md:mt-24 px-4 flex flex-col items-center group cursor-pointer w-full text-center">
-                    <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 bg-white px-6 md:px-8 py-4 md:py-5 rounded-3xl md:rounded-full shadow-[0_10px_40px_-10px_rgba(2,5,72,0.15)] group-hover:shadow-[0_15px_50px_-10px_rgba(2,5,72,0.25)] transition-all duration-300 group-hover:-translate-y-1 w-full max-w-sm sm:max-w-max justify-center">
-                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1e48cb] rounded-full flex items-center justify-center text-white shadow-lg flex-shrink-0">
+                    <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 bg-white px-6 md:px-8 py-4 md:py-5 rounded-3xl md:rounded-full transition-all duration-300 group-hover:-translate-y-1 w-full max-w-sm sm:max-w-max justify-center border border-inamice-blue/10">
+                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1e48cb] rounded-full flex items-center justify-center text-white flex-shrink-0">
                             <Phone size={24} fill="currentColor" />
                         </div>
                         <span className="text-[#1e48cb] text-base sm:text-lg md:text-xl font-bold tracking-wide leading-tight">Contact Our Media Partner Team</span>

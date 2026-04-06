@@ -25,7 +25,10 @@ const Inamice2026Section = () => {
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-6 md:mb-12">
-                        <h2 className="text-2xl md:text-4xl font-bold text-white drop-shadow-md max-w-4xl mx-auto leading-tight px-4 md:px-0">
+                        <div className="flex justify-center mb-4">
+                            <img src="/img/acc-fusion.png" alt="ornament" className="w-16 md:w-24 h-auto object-contain brightness-0 invert opacity-60" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-white drop-shadow-md max-w-4xl mx-auto leading-tight px-4 md:px-0">
                             &ldquo;Empowering Jakarta&rsquo;s Smart Economy through <br className="hidden md:block" />
                             Digital Transformation in the MICE Industry&rdquo;
                         </h2>
@@ -50,8 +53,8 @@ const Inamice2026Section = () => {
 
                         {/* Right: Text Card */}
                         <div className="w-full md:w-7/12">
-                            <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] border-[4px] border-inamice-blue p-5 sm:p-6 md:p-10 h-full flex items-center shadow-xl">
-                                <p className="text-inamice-blue-1 text-[15px] sm:text-base md:text-xl leading-relaxed font-semibold text-justify">
+                            <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] border-[4px] border-inamice-blue-1 p-5 sm:p-6 md:p-10 h-full flex items-center shadow-xl">
+                                <p className="text-inamice-blue-1 text-[15px] sm:text-base md:text-lg leading-relaxed font-semibold text-justify">
                                     INAMICE 2026 positions the MICE industry as a strategic entry point to support Jakarta&rsquo;s Smart Economy agenda. Rather than focusing on technical or operational discussions, the forum serves as a strategic platform to align policy direction, ecosystem readiness, and implementation learning relevant to the future development of Jakarta&rsquo;s MICE industry.
                                 </p>
                             </div>

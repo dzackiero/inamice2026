@@ -72,6 +72,8 @@ const Navbar = () => {
                         >
                             <Link
                                 href={item.href}
+                                target={(item as any).isButton ? "_blank" : undefined}
+                                rel={(item as any).isButton ? "noopener noreferrer" : undefined}
                                 className={`text-[0.9375rem] font-bold transition-all whitespace-nowrap ${isActive(item.href)
                                     ? 'bg-brand-active-bg text-brand-blue px-6 py-2 rounded-full'
                                     : 'text-brand-blue hover:text-brand-orange'
@@ -111,16 +113,18 @@ const Navbar = () => {
 
                 {/* Social Icons */}
                 <div className="hidden md:flex items-center gap-5 text-brand-blue ml-12">
-                    <a href="#" className="hover:text-brand-orange transition-colors">
+                    <a href="#" className="hover:text-brand-orange transition-colors" aria-label="Follow us on Instagram">
                         <Instagram size={24} strokeWidth={2} />
                     </a>
-                    <a href="#" className="hover:text-brand-orange transition-colors">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 1 0-1 13.6 6.84 6.84 0 0 0 6.82-6.82V9.6a9.1 9.1 0 0 0 4.91 2.65v-3.48a5.7 5.7 0 0 1-1.5-.08z" />
+                    <a href="#" className="hover:text-brand-orange transition-colors" aria-label="Follow us on TikTok">
+                        <svg width="22" height="22" viewBox="0 0 48 48" fill="currentColor">
+                            <path d="M38.39 13.47A8.28 8.28 0 0 1 33.22 8.3V7h-7.12v23.7a5.73 5.73 0 0 1-5.72 5.73 5.73 5.73 0 0 1-5.72-5.73 5.73 5.73 0 0 1 5.72-5.73c.63 0 1.23.1 1.8.29v-7.3a13.07 13.07 0 0 0-1.8-.13A12.89 12.89 0 0 0 7.5 30.7a12.89 12.89 0 0 0 12.88 12.88 12.89 12.89 0 0 0 12.88-12.88V17.58a15.24 15.24 0 0 0 8.74 2.75v-7.12a8.24 8.24 0 0 1-3.61.26z" />
                         </svg>
                     </a>
-                    <a href="#" className="hover:text-brand-orange transition-colors">
-                        <Linkedin size={24} strokeWidth={0} fill="currentColor" />
+                    <a href="#" className="hover:text-brand-orange transition-colors" aria-label="Follow us on LinkedIn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
                     </a>
                 </div>
 
@@ -149,6 +153,8 @@ const Navbar = () => {
                                 <div key={item.name} className="flex flex-col gap-1">
                                     <Link
                                         href={item.href}
+                                        target={(item as any).isButton ? "_blank" : undefined}
+                                        rel={(item as any).isButton ? "noopener noreferrer" : undefined}
                                         onClick={() => !item.subItems && setIsMobileMenuOpen(false)}
                                         className={`text-lg font-extrabold px-4 py-3 rounded-xl transition-colors ${isActive(item.href)
                                             ? 'text-inamice-blue-2 bg-brand-active-bg'

@@ -19,7 +19,7 @@ export const NAVIGATION = [
   },
   { name: "Article", href: "/article" },
   { name: "More", href: "/more", seoSuffix: " About INAMICE" },
-  { name: "Registration", href: "/registration", isButton: true },
+  { name: "Registration", href: "https://www.ticket2u.id/event/42792_1c88e9f1bb2d476b82163efbc0b837fb", isButton: true },
 ];
 
 export const THROWBACK_EVENTS = [

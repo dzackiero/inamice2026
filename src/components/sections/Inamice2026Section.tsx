@@ -122,7 +122,7 @@ const Inamice2026Section = () => {
                         { icon: "/icon-materi/objective_3.png", text: "To explore practical directions for digital transformation in the MICE industry" },
                         { icon: "/icon-materi/objective_4.png", text: "To strengthen collaboration among government, industry, and academia" }
                     ].map((item, idx) => (
-                        <div key={idx} className="aspect-square md:aspect-auto bg-white border-[3px] border-inamice-blue rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[3.5rem] md:rounded-bl-[3.5rem] rounded-tl-none rounded-br-none px-3 pt-10 pb-4 md:px-6 md:pt-20 md:pb-8 flex flex-col items-center text-center h-full hover:shadow-xl transition-all relative overflow-hidden group">
+                        <div key={idx} className="aspect-square md:aspect-auto bg-white border-[3px] border-inamice-blue rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[3.5rem] md:rounded-bl-[3.5rem] rounded-tl-none rounded-br-none px-3 pt-10 pb-4 md:px-6 md:pt-14 md:pb-6 flex flex-col items-center text-center h-full hover:shadow-xl transition-all relative overflow-hidden group">
                             {/* Orange Icon Box at Top Left */}
                             <div className="absolute top-0 left-0 bg-inamice-orange text-white p-1.5 md:p-2.5 rounded-br-xl shadow-sm">
                                 <img

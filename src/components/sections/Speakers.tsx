@@ -44,7 +44,7 @@ const Speakers = () => {
                         <img src="/img/acc-fusion.png" alt="ornament" className="w-20 md:w-28 h-auto object-contain" />
                     </div>
                     <div className="bg-inamice-orange text-white px-4 py-2 w-full max-w-xs text-center shadow-lg">
-                        <h2 className="text-xl md:text-3xl font-black uppercase drop-shadow-md">SPEAKERS & TOPIC</h2>
+                        <h2 className="text-xl md:text-2xl font-bold uppercase drop-shadow-md">SPEAKERS & TOPIC</h2>
                     </div>
                 </div>
 
@@ -67,7 +67,7 @@ const Speakers = () => {
                                 />
                             </div>
                         </div>
-                        <h4 className="text-2xl md:text-3xl font-black text-inamice-blue-3 mt-2 md:mt-4">{keynote?.name}</h4>
+                        <h4 className="text-2xl md:text-3xl font-extrabold text-inamice-blue-3 mt-2 md:mt-4">{keynote?.name}</h4>
                         <p className="text-inamice-blue-3 text-sm md:text-md font-medium mb-3 md:mb-4 tracking-wide">{keynote?.role}</p>
                         <p className="text-inamice-blue-3 text-sm md:text-md text-justify max-w-xl px-4 leading-relaxed opacity-80 mb-4 md:mb-6 font-medium">
                             The Keynote Speech will establish the strategic direction for the event, showcasing the Pemerintah
@@ -95,11 +95,11 @@ const Speakers = () => {
                             <div key={speaker.name} className="flex flex-col items-center flex-1 h-full">
                                 <div className="h-[60px] flex items-center justify-center w-full mb-2">
                                     <div className="bg-inamice-orange text-white px-8 py-2 text-center shadow-md">
-                                        <h4 className="text-xl font-black uppercase drop-shadow-md tracking-widest whitespace-nowrap">SUBTOPIC {idx + 1}</h4>
+                                        <h4 className="text-xl font-bold uppercase drop-shadow-md tracking-widest whitespace-nowrap">SUBTOPIC {idx + 1}</h4>
                                     </div>
                                 </div>
                                 <div className="px-2 text-center mb-6 h-[100px] flex items-center justify-center w-full">
-                                    <p className="text-inamice-blue-3 text-[18px] font-black leading-snug max-w-[360px] mx-auto">&quot;{speaker.topic}&quot;</p>
+                                    <p className="text-inamice-blue-3 text-[18px] font-bold leading-snug max-w-[360px] mx-auto">&quot;{speaker.topic}&quot;</p>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div className="relative w-[280px] h-[350px] mb-6">
@@ -107,12 +107,12 @@ const Speakers = () => {
                                         <div className="absolute inset-[6px] bg-white rounded-tr-[calc(4rem-6px)] rounded-bl-[calc(4rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
                                             <div className="flex flex-col items-center scale-90">
                                                 <svg className="w-20 h-20 text-inamice-blue/20 mb-2" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                <span className="text-inamice-blue/30 font-black text-lg tracking-widest uppercase">TBA</span>
+                                                <span className="text-inamice-blue/30 font-bold text-lg tracking-widest uppercase">TBA</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center">
-                                        <h4 className="text-[16px] font-black uppercase tracking-wide whitespace-normal leading-tight">TO BE ANNOUNCED</h4>
+                                        <h4 className="text-[16px] font-bold uppercase tracking-wide whitespace-normal leading-tight">TO BE ANNOUNCED</h4>
                                     </div>
                                     <div className="h-4"></div>
                                 </div>
@@ -131,19 +131,19 @@ const Speakers = () => {
                                         <div className="absolute inset-[3px] bg-white rounded-tr-[calc(1.2rem-3px)] rounded-bl-[calc(1.2rem-3px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
                                             <div className="flex flex-col items-center">
                                                 <svg className="w-10 h-10 text-inamice-blue/20 mb-1" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                <span className="text-inamice-blue/30 font-black text-[10px] tracking-wider uppercase">TBA</span>
+                                                <span className="text-inamice-blue/30 font-bold text-[10px] tracking-wider uppercase">TBA</span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* Right: Info */}
                                     <div className="flex-1 min-w-0">
                                         <div className="bg-inamice-orange text-white px-3 py-1 mb-2 w-fit shadow-sm">
-                                            <span className="text-[11px] font-black uppercase tracking-widest">SUBTOPIC {idx + 1}</span>
+                                            <span className="text-[11px] font-bold uppercase tracking-widest">SUBTOPIC {idx + 1}</span>
                                         </div>
-                                        <p className="text-inamice-blue-3 text-[13px] font-black leading-snug mb-2 line-clamp-3">
+                                        <p className="text-inamice-blue-3 text-[13px] font-bold leading-snug mb-2 line-clamp-3">
                                             &quot;{speaker.topic}&quot;
                                         </p>
-                                        <p className="text-inamice-orange text-[11px] font-black uppercase tracking-wide">To Be Announced</p>
+                                        <p className="text-inamice-orange text-[11px] font-bold uppercase tracking-wide">To Be Announced</p>
                                     </div>
                                 </div>
                             </div>
@@ -169,11 +169,11 @@ const Speakers = () => {
                             <div key={idx} className="flex flex-col items-center flex-1 h-full">
                                 <div className="h-[60px] flex items-center justify-center w-full mb-2">
                                     <div className="bg-inamice-orange text-white px-8 py-2 text-center shadow-md">
-                                        <h4 className="text-xl font-black uppercase drop-shadow-md tracking-widest whitespace-nowrap">SUBTOPIC {idx + 1}</h4>
+                                        <h4 className="text-xl font-bold uppercase drop-shadow-md tracking-widest whitespace-nowrap">SUBTOPIC {idx + 1}</h4>
                                     </div>
                                 </div>
                                 <div className="px-2 text-center mb-6 h-[100px] flex items-center justify-center w-full">
-                                    <p className="text-inamice-blue-3 text-[18px] font-black leading-snug max-w-[360px] mx-auto">&quot;{speaker.topic}&quot;</p>
+                                    <p className="text-inamice-blue-3 text-[18px] font-bold leading-snug max-w-[360px] mx-auto">&quot;{speaker.topic}&quot;</p>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div className="relative w-[280px] h-[350px] mb-6">
@@ -181,12 +181,12 @@ const Speakers = () => {
                                         <div className="absolute inset-[6px] bg-white rounded-tr-[calc(4rem-6px)] rounded-bl-[calc(4rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
                                             <div className="flex flex-col items-center scale-90">
                                                 <svg className="w-20 h-20 text-inamice-blue/20 mb-2" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                <span className="text-inamice-blue/30 font-black text-lg tracking-widest uppercase">TBA</span>
+                                                <span className="text-inamice-blue/30 font-bold text-lg tracking-widest uppercase">TBA</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center">
-                                        <h4 className="text-[16px] font-black uppercase tracking-wide whitespace-normal leading-tight">TO BE ANNOUNCED</h4>
+                                        <h4 className="text-[16px] font-bold uppercase tracking-wide whitespace-normal leading-tight">TO BE ANNOUNCED</h4>
                                     </div>
                                     <div className="h-4"></div>
                                 </div>
@@ -205,19 +205,19 @@ const Speakers = () => {
                                         <div className="absolute inset-[3px] bg-white rounded-tr-[calc(1.2rem-3px)] rounded-bl-[calc(1.2rem-3px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
                                             <div className="flex flex-col items-center">
                                                 <svg className="w-10 h-10 text-inamice-blue/20 mb-1" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                <span className="text-inamice-blue/30 font-black text-[10px] tracking-wider uppercase">TBA</span>
+                                                <span className="text-inamice-blue/30 font-bold text-[10px] tracking-wider uppercase">TBA</span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* Right: Info */}
                                     <div className="flex-1 min-w-0">
                                         <div className="bg-inamice-orange text-white px-3 py-1 mb-2 w-fit shadow-sm">
-                                            <span className="text-[11px] font-black uppercase tracking-widest">SUBTOPIC {idx + 1}</span>
+                                            <span className="text-[11px] font-bold uppercase tracking-widest">SUBTOPIC {idx + 1}</span>
                                         </div>
-                                        <p className="text-inamice-blue-3 text-[13px] font-black leading-snug mb-2 line-clamp-3">
+                                        <p className="text-inamice-blue-3 text-[13px] font-bold leading-snug mb-2 line-clamp-3">
                                             &quot;{speaker.topic}&quot;
                                         </p>
-                                        <p className="text-inamice-orange text-[11px] font-black uppercase tracking-wide">To Be Announced</p>
+                                        <p className="text-inamice-orange text-[11px] font-bold uppercase tracking-wide">To Be Announced</p>
                                     </div>
                                 </div>
                             </div>

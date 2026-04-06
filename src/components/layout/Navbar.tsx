@@ -72,7 +72,7 @@ const Navbar = () => {
                         >
                             <Link
                                 href={item.href}
-                                className={`text-[15px] font-bold transition-all whitespace-nowrap ${isActive(item.href)
+                                className={`text-[0.9375rem] font-bold transition-all whitespace-nowrap ${isActive(item.href)
                                     ? 'bg-brand-active-bg text-brand-blue px-6 py-2 rounded-full'
                                     : 'text-brand-blue hover:text-brand-orange'
                                     }`}
@@ -165,7 +165,7 @@ const Navbar = () => {
                                                     key={idx}
                                                     href={sub.href}
                                                     onClick={() => setIsMobileMenuOpen(false)}
-                                                    className={`font-semibold text-[15px] py-2 px-4 rounded-lg transition-colors ${isActive(sub.href)
+                                                    className={`font-semibold text-[0.9375rem] py-2 px-4 rounded-lg transition-colors ${isActive(sub.href)
                                                         ? 'text-inamice-blue-2 bg-brand-active-bg'
                                                         : 'text-brand-blue/70 hover:bg-slate-50 hover:text-brand-blue'
                                                         }`}

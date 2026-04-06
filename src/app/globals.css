@@ -22,6 +22,18 @@
     html {
         scroll-behavior: smooth;
     }
+
+    @media (min-width: 1025px) {
+        html {
+            font-size: clamp(75%, 0.5rem + 0.5vw, 100%);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        html {
+            font-size: 100%;
+        }
+    }
 }
 
 @layer components {

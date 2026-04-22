@@ -83,10 +83,10 @@ const Speakers = () => {
                 {/* Plenary Session 1 */}
                 <div className="flex flex-col items-center text-center mb-12 md:mb-16">
                     <h3 className="text-2xl md:text-3xl font-extrabold text-inamice-blue-3 uppercase mb-2">PLENARY SESSION 1</h3>
-                    <p className="text-inamice-blue-3 text-sm sm:text-base md:text-lg font-extrabold mb-3 md:mb-4 px-4">&ldquo;Building Smart Economy Foundations: Digital Transformation, Policy <br className="hidden md:block" />Alignment, and Sectoral Contribution&rdquo;</p>
+                    <p className="text-inamice-blue-3 text-sm sm:text-base md:text-lg font-extrabold mb-3 md:mb-4 px-4">&ldquo;Building Smart Economy Foundations in the MICE Industry: <br className="hidden md:block" />Digital Transformation, Industry Perspective, and Sectoral Contribution&rdquo;</p>
                     <p className="text-inamice-blue-3 text-sm md:text-md text-center max-w-3xl px-4 leading-relaxed opacity-80 mb-8 md:mb-12">
                         Plenary Session 1 serves to unify the basic understanding of Digital Transformation and Smart Economy before
-                        moving into the implementation stage. This session discusses how Digital Transformation, policy alignment, and data-driven measurement frameworks form the main foundation in building a Smart Economy in Jakarta.
+                        moving into the implementation stage. This session discusses how Digital Transformation, industry perspective, and sectoral contribution form the main foundation in building a Smart Economy in the MICE Industry.
                     </p>
 
                     {/* Desktop: Original 3-column grid */}

@@ -61,7 +61,7 @@ export const SPEAKERS = [
   {
     name: "CYRIL RAOUL HAKIM",
     role: "Special Staff to the Governor of DKI Jakarta",
-    topic: "Translating Smart Economy Vision Into Strategic Sector Direction",
+    topic: "Translating Smart Economy Vision Into Industry Strategy and Sector Growth",
     type: "PLENARY SESSION 1",
     image: "/img/cyril-raoul.jpg",
   },
@@ -99,7 +99,7 @@ export const RUNDOWN = [
   { time: "7:30 - 8:15", duration: "0:45:00", activity: "Delegates Re-registration & Coffee Break" },
   { time: "8:15 - 8:45", duration: "0:30:00", activity: "Opening Ceremony" },
   { time: "8:45 - 8:55", duration: "0:10:00", activity: "Keynote Speech \u201CPositioning MICE as a Strategic Lever for Jakarta\u2019s Urban Economy\u201D" },
-  { time: "8:55 - 10:15", duration: "1:20:00", activity: "Plenary Session 1 \u2014 \u201CBuilding Smart Economy Foundations: Digital Transformation, Policy Alignment, and Sectoral Contribution\u201D" },
+  { time: "8:55 - 10:15", duration: "1:20:00", activity: "Plenary Session 1 — “Building Smart Economy Foundations in the MICE Industry: Digital Transformation, Industry Perspective, and Sectoral Contribution”" },
   { time: "10:15 - 10:35", duration: "0:20:00", activity: "Coffee Break & Brand Presentation by Sponsor" },
   { time: "10:35 - 11:55", duration: "1:20:00", activity: "Plenary Session 2 \u2014 \u201CImplementing Smart Economy Practices in the MICE Ecosystem\u201D" },
   { time: "11:55 - 12:15", duration: "0:20:00", activity: "Brand Presentation by Sponsor" },

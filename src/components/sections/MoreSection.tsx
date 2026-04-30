@@ -43,26 +43,28 @@ const MoreSection = () => {
                                 <h3 className="font-extrabold text-sm md:text-base tracking-widest uppercase">HOSTED BY</h3>
                             </div>
 
-                            <img src="/img/logo-pnj.png" alt="Politeknik Negeri Jakarta" className="w-48 sm:w-60 md:w-72 mb-8 md:mb-12 drop-shadow-2xl" />
+                            <a href="https://pnj.ac.id/" target="_blank" rel="noopener noreferrer">
+                                <img src="/img/logo-pnj.png" alt="Politeknik Negeri Jakarta" className="w-48 sm:w-60 md:w-72 mb-8 md:mb-12 drop-shadow-2xl" />
+                            </a>
 
                             {/* Social Grid PNJ */}
                             <div className="grid grid-cols-3 gap-x-6 gap-y-5 sm:gap-x-8 sm:gap-y-8 md:gap-x-16 md:gap-y-10">
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="https://share.google/0DfBRRCGYV3gFfxct" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="PNJ Address">
                                     <MapPin size={24} />
                                 </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="mailto:akademik@pnj.ac.id" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="PNJ Email">
                                     <Mail size={24} />
                                 </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="https://www.instagram.com/politekniknegerijakarta/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="PNJ Instagram">
                                     <Instagram size={24} />
                                 </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="tel:+62217270036" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="PNJ Phone (021-7270036 ext 217)">
                                     <Phone size={24} />
                                 </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="https://pnj.ac.id/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="PNJ Website">
                                     <Globe size={24} />
                                 </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="https://www.tiktok.com/@pnjofficial_" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="PNJ TikTok">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 1 0-1 13.6 6.84 6.84 0 0 0 6.82-6.82V9.6a9.1 9.1 0 0 0 4.91 2.65v-3.48a5.7 5.7 0 0 1-1.5-.08z" />
                                     </svg>
@@ -76,29 +78,20 @@ const MoreSection = () => {
                                 <h3 className="font-extrabold text-sm md:text-base tracking-widest uppercase">ORGANIZED BY</h3>
                             </div>
 
-                            <img src="/logo/logo-mice-new.jpg" alt="MICE" className="w-48 sm:w-60 md:w-72 mb-8 md:mb-12 rounded-md" />
+                            <a href="https://www.instagram.com/mice_pnj/" target="_blank" rel="noopener noreferrer">
+                                <img src="/logo/logo-mice-new.jpg" alt="MICE" className="w-48 sm:w-60 md:w-72 mb-8 md:mb-12 rounded-md" />
+                            </a>
 
                             {/* Social Grid MICE */}
-                            <div className="grid grid-cols-3 gap-x-6 gap-y-5 sm:gap-x-8 sm:gap-y-8 md:gap-x-16 md:gap-y-10">
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                            <div className="flex flex-wrap justify-center gap-x-6 gap-y-5 sm:gap-x-8 sm:gap-y-8 md:gap-x-16 md:gap-y-10">
+                                <a href="https://share.google/0DfBRRCGYV3gFfxct" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="MICE Address">
                                     <MapPin size={24} />
                                 </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="mailto:mice@bisnis.pnj.ac.id" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="MICE Email">
                                     <Mail size={24} />
                                 </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
+                                <a href="https://www.instagram.com/mice_pnj/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200" title="MICE Instagram">
                                     <Instagram size={24} />
-                                </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
-                                    <Phone size={24} />
-                                </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
-                                    <Linkedin size={24} fill="currentColor" />
-                                </a>
-                                <a href="#" className="w-14 h-14 rounded-full bg-[#1e48cb] flex items-center justify-center text-white cursor-pointer hover:bg-inamice-orange transition-colors shadow-lg hover:shadow-xl hover:-translate-y-1 transform duration-200">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 1 0-1 13.6 6.84 6.84 0 0 0 6.82-6.82V9.6a9.1 9.1 0 0 0 4.91 2.65v-3.48a5.7 5.7 0 0 1-1.5-.08z" />
-                                    </svg>
                                 </a>
                             </div>
                         </div>

@@ -116,15 +116,15 @@ const Navbar = () => {
 
                 {/* Social Icons */}
                 <div className="hidden md:flex items-center gap-5 text-brand-blue ml-12">
-                    <a href="#" className="hover:text-brand-orange transition-colors" aria-label="Follow us on Instagram">
+                    <a href="https://www.instagram.com/inamice2026?igsh=c3E3OXNobzRibTI2" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors" aria-label="Follow us on Instagram">
                         <Instagram size={24} strokeWidth={2} />
                     </a>
-                    <a href="#" className="hover:text-brand-orange transition-colors" aria-label="Follow us on TikTok">
+                    <a href="https://www.tiktok.com/@inamice2026?_r=1&_t=ZS-96LXUVuXieO" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors" aria-label="Follow us on TikTok">
                         <svg width="22" height="22" viewBox="0 0 48 48" fill="currentColor">
                             <path d="M38.39 13.47A8.28 8.28 0 0 1 33.22 8.3V7h-7.12v23.7a5.73 5.73 0 0 1-5.72 5.73 5.73 5.73 0 0 1-5.72-5.73 5.73 5.73 0 0 1 5.72-5.73c.63 0 1.23.1 1.8.29v-7.3a13.07 13.07 0 0 0-1.8-.13A12.89 12.89 0 0 0 7.5 30.7a12.89 12.89 0 0 0 12.88 12.88 12.89 12.89 0 0 0 12.88-12.88V17.58a15.24 15.24 0 0 0 8.74 2.75v-7.12a8.24 8.24 0 0 1-3.61.26z" />
                         </svg>
                     </a>
-                    <a href="#" className="hover:text-brand-orange transition-colors" aria-label="Follow us on LinkedIn">
+                    <a href="https://www.linkedin.com/in/inamice-indonesia-mice-conference-exhibition-1162952b4?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" className="hover:text-brand-orange transition-colors" aria-label="Follow us on LinkedIn">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>

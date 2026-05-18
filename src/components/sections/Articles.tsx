@@ -17,9 +17,9 @@ const Articles = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-10">
-                    {ARTICLES.map((article, idx) => (
-                        <div key={idx} className="group cursor-pointer flex flex-col h-full">
-                            {/* Card Wrapper with Gradient Stroke */}
+                    {ARTICLES.map((article, idx) => {
+                        const cardContent = (
+                            /* Card Wrapper with Gradient Stroke */
                             <div className="p-[3px] md:p-[4px] bg-gradient-to-b from-inamice-blue-1 to-inamice-orange rounded-tr-[2.5rem] rounded-bl-[2.5rem] md:rounded-tr-[4rem] md:rounded-bl-[4rem] rounded-tl-none rounded-br-none overflow-hidden flex flex-col shadow-md hover:shadow-xl transition-all duration-300 h-full">
 
                                 <div className="bg-white rounded-tr-[calc(2.5rem-3px)] rounded-bl-[calc(2.5rem-3px)] md:rounded-tr-[calc(4rem-4px)] md:rounded-bl-[calc(4rem-4px)] rounded-tl-none rounded-br-none overflow-hidden flex flex-col h-full">
@@ -55,8 +55,28 @@ const Articles = () => {
                                 </div>
 
                             </div>
-                        </div>
-                    ))}
+                        );
+
+                        if ('href' in article && article.href) {
+                            return (
+                                <a
+                                    key={idx}
+                                    href={article.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group cursor-pointer flex flex-col h-full"
+                                >
+                                    {cardContent}
+                                </a>
+                            );
+                        }
+
+                        return (
+                            <div key={idx} className="group flex flex-col h-full">
+                                {cardContent}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

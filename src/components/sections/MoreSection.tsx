@@ -172,14 +172,14 @@ const MoreSection = () => {
                 </div>
 
                 {/* Final CTA */}
-                <div className="mt-14 md:mt-24 px-4 flex flex-col items-center group cursor-pointer w-full text-center">
+                <a href="https://wa.me/6281280020071" target="_blank" rel="noopener noreferrer" className="mt-14 md:mt-24 px-4 flex flex-col items-center group w-full text-center">
                     <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 bg-white px-6 md:px-8 py-4 md:py-5 rounded-3xl md:rounded-full transition-all duration-300 group-hover:-translate-y-1 w-full max-w-sm sm:max-w-max justify-center border border-inamice-blue/10">
                         <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1e48cb] rounded-full flex items-center justify-center text-white flex-shrink-0">
                             <Phone size={24} fill="currentColor" />
                         </div>
                         <span className="text-[#1e48cb] text-base sm:text-lg md:text-xl font-bold tracking-wide leading-tight">Contact Our Sponsorship Team</span>
                     </div>
-                </div>
+                </a>
             </div>
 
             {/* Why Become a Media Partner Section */}
@@ -247,14 +247,14 @@ const MoreSection = () => {
                 </div>
 
                 {/* Final CTA */}
-                <div className="mt-14 md:mt-24 px-4 flex flex-col items-center group cursor-pointer w-full text-center">
+                <a href="https://wa.me/6285920725337" target="_blank" rel="noopener noreferrer" className="mt-14 md:mt-24 px-4 flex flex-col items-center group w-full text-center">
                     <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 bg-white px-6 md:px-8 py-4 md:py-5 rounded-3xl md:rounded-full transition-all duration-300 group-hover:-translate-y-1 w-full max-w-sm sm:max-w-max justify-center border border-inamice-blue/10">
                         <div className="w-12 h-12 md:w-14 md:h-14 bg-[#1e48cb] rounded-full flex items-center justify-center text-white flex-shrink-0">
                             <Phone size={24} fill="currentColor" />
                         </div>
                         <span className="text-[#1e48cb] text-base sm:text-lg md:text-xl font-bold tracking-wide leading-tight">Contact Our Media Partner Team</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
     );

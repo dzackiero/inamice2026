@@ -130,18 +130,21 @@ export const ARTICLES = [
     title: "The Road to INAMICE 2025: Mendorong Keberlanjutan MICE Bersama Perserikatan Bangsa-bangsa Indonesia",
     source: "Media Indonesia",
     image: "/img/article-1.jpg",
+    href: "https://mediaindonesia.com/humaniora/746612/the-road-to-inamice-2025-mendorong-keberlanjutan-mice-bersama-perserikatan-bangsa-bangsa-indonesia",
   },
   {
     date: "24/2/2025",
     title: "The Road to INAMICE 2025: Dorong Keberlanjutan MICE Bersama Perserikatan Bangsa-Bangsa Indonesia",
     source: "Medcom.id",
     image: "/img/article-2.jpg",
+    href: "https://www.medcom.id/gaya/wisata/nN9O3y5k-the-road-to-inamice-2025-dorong-keberlanjutan-mice-bersama-perserikatan-bangsa-bangsa-indonesia",
   },
   {
     date: "26/2/2025",
     title: "The Road to INAMICE 2025: Promoting MICE Sustainability with UN Indonesia",
     source: "Netralnews.com",
     image: "/img/article-3.jpg",
+    href: "https://en.netralnews.com/the-road-to-inamice-2025-promoting-mice-sustainability-with-un-indonesia/bGxmMmFsQTlUL3RNaVNnOG5LQ2U5UT09",
   },
   {
     date: "25/6/2025",
@@ -154,11 +157,13 @@ export const ARTICLES = [
     title: "INAMICE 2024: Saatnya Optimalkan Posisi Strategis Jakarta di Persimpangan Asia Tenggara",
     source: "National Geographic",
     image: "/img/article-5.jpg",
+    href: "https://share.google/gAdXEZzyjAGFTKD6J",
   },
   {
     date: "25/6/2024",
     title: "Rampung Digelar, Konferensi The 7th INAMICE 2024 Bahas Potensi Jakarta Jadi Destinasi Wisata Bisnis Unggulan",
     source: "Medcom.id",
     image: "/img/article-6.jpg",
+    href: "https://share.google/olpwa62uzTzGf7mQH",
   },
 ];

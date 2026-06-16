@@ -51,7 +51,7 @@ export const SPEAKERS = [
     role: "Governor of Jakarta for 2024-2029 period",
     topic: "Jakarta's Commitment to a Sustainable and Inclusive Global City",
     type: "KEYNOTE SPEECH",
-    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/keynote_speaker.png`,
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/keynote_speaker.jpg`,
   },
   {
     name: "Einst Rengga Damahatko & Romyaldy, S.T., M.Eng.",

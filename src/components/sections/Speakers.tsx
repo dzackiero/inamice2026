@@ -105,26 +105,28 @@ const SpeakerDetails = ({
     speaker,
     inverted = false,
     compact = false,
+    rolePlacement = 'inline',
 }: {
     speaker: SpeakerEntry;
     inverted?: boolean;
     compact?: boolean;
+    rolePlacement?: 'inline' | 'below';
 }) => {
     const people = getSpeakerPeople(speaker);
     const wrapperClass = people.length > 1 ? 'grid grid-cols-2 gap-3 w-full' : 'w-full';
     const nameClass = inverted
         ? `${compact ? 'text-[11px]' : 'text-[13px] md:text-[15px]'} font-bold uppercase tracking-wide leading-tight text-white`
-        : `${compact ? 'text-[11px]' : 'text-[14px] md:text-[16px]'} font-bold uppercase tracking-wide leading-tight text-inamice-orange`;
+        : `${compact ? 'text-[11px]' : 'text-[18px] md:text-2xl'} font-extrabold uppercase tracking-wide leading-tight text-inamice-blue-3`;
     const roleClass = inverted
         ? `${compact ? 'text-[9px]' : 'text-[10px] md:text-[11px]'} mt-1 text-white/90 leading-tight font-medium`
-        : `${compact ? 'text-[10px]' : 'text-[12px]'} mt-1 text-inamice-blue-3/80 leading-tight font-medium`;
+        : `${compact ? 'text-[10px]' : 'text-sm md:text-md'} mt-2 text-inamice-blue-3 leading-tight font-semibold`;
 
     return (
         <div className={wrapperClass}>
             {people.map((person) => (
                 <div key={person.name} className="min-w-0">
                     <h4 className={nameClass}>{person.name}</h4>
-                    {person.role && person.role !== "TBA" && <p className={roleClass}>{person.role}</p>}
+                    {rolePlacement === 'inline' && person.role && person.role !== "TBA" && <p className={roleClass}>{person.role}</p>}
                 </div>
             ))}
         </div>
@@ -234,8 +236,8 @@ const Speakers = () => {
                                             <SpeakerImageGroup src={plenary1Feature.image} alt={plenary1Feature.name} />
                                         </div>
                                     </div>
-                                    <div className="w-[680px] bg-inamice-orange text-white py-3 px-4 mb-4 text-center min-h-[60px] flex flex-col justify-center">
-                                        <SpeakerDetails speaker={plenary1Feature} inverted />
+                                    <div className="w-[680px] text-center mb-4">
+                                        <SpeakerDetails speaker={plenary1Feature} />
                                     </div>
                                 </div>
                             </div>
@@ -259,8 +261,8 @@ const Speakers = () => {
                                             <SpeakerImageGroup src={speaker.image} alt={speaker.name} />
                                         </div>
                                     </div>
-                                    <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center min-h-[60px] flex flex-col justify-center">
-                                        <SpeakerDetails speaker={speaker} inverted />
+                                    <div className="w-[280px] text-center mb-4">
+                                        <SpeakerDetails speaker={speaker} />
                                     </div>
                                     <div className="h-4"></div>
                                 </div>
@@ -328,8 +330,8 @@ const Speakers = () => {
                                             <SpeakerImageGroup src={speaker.image} alt={speaker.name} />
                                         </div>
                                     </div>
-                                    <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center min-h-[60px] flex flex-col justify-center">
-                                        <SpeakerDetails speaker={speaker} inverted />
+                                    <div className="w-[280px] text-center mb-4">
+                                        <SpeakerDetails speaker={speaker} />
                                     </div>
                                     <div className="h-4"></div>
                                 </div>

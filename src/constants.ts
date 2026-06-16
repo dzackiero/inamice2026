@@ -22,6 +22,8 @@ export const NAVIGATION = [
   { name: "Registration", href: "https://www.ticket2u.id/event/49337_962c67fd8ae94ed896db20dd98a052a9", isButton: true },
 ];
 
+const MAIN_EVENT_SPEAKER_IMAGE_BASE = "https://cdn.inamice.net/assets/main-event/speakers";
+
 export const THROWBACK_EVENTS = [
   {
     year: "2023",
@@ -49,49 +51,49 @@ export const SPEAKERS = [
     role: "Governor of Jakarta for 2024-2029 period",
     topic: "Jakarta's Commitment to a Sustainable and Inclusive Global City",
     type: "KEYNOTE SPEECH",
-    image: "/img/pramono.jpg",
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/keynote_speaker.png`,
   },
   {
     name: "EINST RENGGA DAMAHATKO & ROMYALDY",
     role: "TBA",
     topic: "Understanding Digital Transformation as the Foundation of Smart Economy",
     type: "PLENARY SESSION 1",
-    image: "/img/speakers/tba.png",
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/session1_subtopic1_speaker.png`,
   },
   {
     name: "YUDHA IMAM SUTEDJA",
     role: "TBA",
     topic: "Translating Smart Economy Vision Into Industry Strategy and Sector Growth",
     type: "PLENARY SESSION 1",
-    image: "/img/speakers/tba.png",
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/session1_subtopic2_speaker.png`,
   },
   {
     name: "VINSENSIUS JEMADU",
     role: "TBA",
     topic: "Defining Smart Economy Metrics: Indicators and the Economic Contributions of MICE",
     type: "PLENARY SESSION 1",
-    image: "/img/speakers/tba.png",
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/session1_subtopic3_speaker.png`,
   },
   {
     name: "MAXMILAAN BRUINIER",
     role: "TBA",
     topic: "Understanding Industry Realities and Digital Transformation Opportunities in the MICE Ecosystem",
     type: "PLENARY SESSION 2",
-    image: "/img/speakers/tba.png",
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/session2_subtopic1_speaker.png`,
   },
   {
     name: "NABIL RAMADHAN",
     role: "TBA",
     topic: "Implementing Financial and Digital Transformation in MICE Practices",
     type: "PLENARY SESSION 2",
-    image: "/img/speakers/tba.png"
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/session2_subtopic2_speaker.png`
   },
   {
     name: "ORACHORN WONGPAN-NGAM",
     role: "TBA",
     topic: "Benchmarking Thailand’s National MICE Governance Model to Strengthen Jakarta’s Strategic Direction",
     type: "PLENARY SESSION 2",
-    image: "/img/speakers/tba.png"
+    image: `${MAIN_EVENT_SPEAKER_IMAGE_BASE}/session2_subtopic3_speaker.png`
   },
 ];
 

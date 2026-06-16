@@ -1,5 +1,62 @@
+'use client';
+
 import React from 'react';
 import { SPEAKERS } from '../../constants';
+
+const TbaPlaceholder = ({ compact = false }: { compact?: boolean }) => (
+    <div className={`flex flex-col items-center ${compact ? '' : 'scale-90'}`}>
+        <svg className={`${compact ? 'w-10 h-10 mb-1' : 'w-20 h-20 mb-2'} text-inamice-blue/20`} fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
+        <span className={`text-inamice-blue/30 font-bold tracking-wider uppercase ${compact ? 'text-[10px]' : 'text-lg'}`}>TBA</span>
+    </div>
+);
+
+const SpeakerImage = ({
+    src,
+    alt,
+    compact = false,
+}: {
+    src?: string;
+    alt?: string;
+    compact?: boolean;
+}) => {
+    const [status, setStatus] = React.useState<'loading' | 'loaded' | 'error'>('loading');
+
+    React.useEffect(() => {
+        if (!src) {
+            setStatus('error');
+            return;
+        }
+
+        let isCurrent = true;
+        setStatus('loading');
+
+        const image = new window.Image();
+        image.onload = () => {
+            if (isCurrent) setStatus('loaded');
+        };
+        image.onerror = () => {
+            if (isCurrent) setStatus('error');
+        };
+        image.src = src;
+
+        return () => {
+            isCurrent = false;
+        };
+    }, [src]);
+
+    if (status !== 'loaded' || !src) {
+        return <TbaPlaceholder compact={compact} />;
+    }
+
+    return (
+        <img
+            src={src}
+            alt={alt}
+            className="w-full h-full object-cover"
+            onError={() => setStatus('error')}
+        />
+    );
+};
 
 const Speakers = () => {
     const keynote = SPEAKERS.find(s => s.type === "KEYNOTE SPEECH");
@@ -59,12 +116,8 @@ const Speakers = () => {
                             {/* The Gradient Frame */}
                             <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[3.5rem] rounded-bl-[3.5rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] rounded-tl-none rounded-br-none" />
                             {/* The Inner "Gap" and Image Box */}
-                            <div className="absolute inset-[5px] md:inset-[6px] bg-white rounded-tr-[calc(3.5rem-5px)] rounded-bl-[calc(3.5rem-5px)] md:rounded-tr-[calc(5rem-6px)] md:rounded-bl-[calc(5rem-6px)] rounded-tl-none rounded-br-none overflow-hidden">
-                                <img
-                                    src={keynote?.image}
-                                    alt={keynote?.name}
-                                    className="w-full h-full object-cover"
-                                />
+                            <div className="absolute inset-[5px] md:inset-[6px] bg-white rounded-tr-[calc(3.5rem-5px)] rounded-bl-[calc(3.5rem-5px)] md:rounded-tr-[calc(5rem-6px)] md:rounded-bl-[calc(5rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
+                                <SpeakerImage src={keynote?.image} alt={keynote?.name} />
                             </div>
                         </div>
                         <h4 className="text-2xl md:text-3xl font-extrabold text-inamice-blue-3 mt-2 md:mt-4">{keynote?.name}</h4>
@@ -105,14 +158,7 @@ const Speakers = () => {
                                     <div className="relative w-[280px] h-[350px] mb-6">
                                         <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[6px] bg-white rounded-tr-[calc(4rem-6px)] rounded-bl-[calc(4rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            {speaker.image && speaker.image !== "/img/speakers/tba.png" ? (
-                                                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
-                                            ) : (
-                                                <div className="flex flex-col items-center scale-90">
-                                                    <svg className="w-20 h-20 text-inamice-blue/20 mb-2" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                    <span className="text-inamice-blue/30 font-bold text-lg tracking-widest uppercase">TBA</span>
-                                                </div>
-                                            )}
+                                            <SpeakerImage src={speaker.image} alt={speaker.name} />
                                         </div>
                                     </div>
                                     <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center min-h-[60px] flex flex-col justify-center">
@@ -134,14 +180,7 @@ const Speakers = () => {
                                     <div className="relative w-[90px] h-[110px] flex-shrink-0">
                                         <div className="absolute inset-0 bg-gradient-to-b from-inamice-blue to-inamice-orange rounded-tr-[1.2rem] rounded-bl-[1.2rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[3px] bg-white rounded-tr-[calc(1.2rem-3px)] rounded-bl-[calc(1.2rem-3px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            {speaker.image && speaker.image !== "/img/speakers/tba.png" ? (
-                                                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
-                                            ) : (
-                                                <div className="flex flex-col items-center">
-                                                    <svg className="w-10 h-10 text-inamice-blue/20 mb-1" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                    <span className="text-inamice-blue/30 font-bold text-[10px] tracking-wider uppercase">TBA</span>
-                                                </div>
-                                            )}
+                                            <SpeakerImage src={speaker.image} alt={speaker.name} compact />
                                         </div>
                                     </div>
                                     {/* Right: Info */}
@@ -189,14 +228,7 @@ const Speakers = () => {
                                     <div className="relative w-[280px] h-[350px] mb-6">
                                         <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[6px] bg-white rounded-tr-[calc(4rem-6px)] rounded-bl-[calc(4rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            {speaker.image && speaker.image !== "/img/speakers/tba.png" ? (
-                                                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
-                                            ) : (
-                                                <div className="flex flex-col items-center scale-90">
-                                                    <svg className="w-20 h-20 text-inamice-blue/20 mb-2" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                    <span className="text-inamice-blue/30 font-bold text-lg tracking-widest uppercase">TBA</span>
-                                                </div>
-                                            )}
+                                            <SpeakerImage src={speaker.image} alt={speaker.name} />
                                         </div>
                                     </div>
                                     <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center min-h-[60px] flex flex-col justify-center">
@@ -218,14 +250,7 @@ const Speakers = () => {
                                     <div className="relative w-[90px] h-[110px] flex-shrink-0">
                                         <div className="absolute inset-0 bg-gradient-to-b from-inamice-blue to-inamice-orange rounded-tr-[1.2rem] rounded-bl-[1.2rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[3px] bg-white rounded-tr-[calc(1.2rem-3px)] rounded-bl-[calc(1.2rem-3px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            {speaker.image && speaker.image !== "/img/speakers/tba.png" ? (
-                                                <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
-                                            ) : (
-                                                <div className="flex flex-col items-center">
-                                                    <svg className="w-10 h-10 text-inamice-blue/20 mb-1" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
-                                                    <span className="text-inamice-blue/30 font-bold text-[10px] tracking-wider uppercase">TBA</span>
-                                                </div>
-                                            )}
+                                            <SpeakerImage src={speaker.image} alt={speaker.name} compact />
                                         </div>
                                     </div>
                                     {/* Right: Info */}

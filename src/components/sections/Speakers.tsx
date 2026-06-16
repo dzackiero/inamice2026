@@ -3,6 +3,13 @@
 import React from 'react';
 import { SPEAKERS } from '../../constants';
 
+type SpeakerImageSource = string | string[] | undefined;
+type SpeakerEntry = (typeof SPEAKERS)[number];
+type SpeakerPerson = {
+    name: string;
+    role?: string;
+};
+
 const TbaPlaceholder = ({ compact = false }: { compact?: boolean }) => (
     <div className={`flex flex-col items-center ${compact ? '' : 'scale-90'}`}>
         <svg className={`${compact ? 'w-10 h-10 mb-1' : 'w-20 h-20 mb-2'} text-inamice-blue/20`} fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2A5 5 0 1012 12a5 5 0 000-10zM5.006 20.448C6.183 17.5 9.1 16 12 16s5.817 1.5 6.994 4.448A10.957 10.957 0 0112 23c-2.485 0-4.783-.824-6.994-2.552z" clipRule="evenodd" /></svg>
@@ -58,9 +65,77 @@ const SpeakerImage = ({
     );
 };
 
+const SpeakerImageGroup = ({
+    src,
+    alt,
+    compact = false,
+}: {
+    src?: SpeakerImageSource;
+    alt?: string;
+    compact?: boolean;
+}) => {
+    if (!Array.isArray(src)) {
+        return <SpeakerImage src={src} alt={alt} compact={compact} />;
+    }
+
+    return (
+        <div className={`grid grid-cols-2 w-full h-full ${compact ? 'gap-[2px]' : 'gap-[3px]'}`}>
+            {src.map((imageSrc, index) => (
+                <div key={`${imageSrc}-${index}`} className="min-w-0 h-full overflow-hidden bg-white flex items-center justify-center">
+                    <SpeakerImage
+                        src={imageSrc}
+                        alt={`${alt ?? 'Speaker'} ${index + 1}`}
+                        compact={compact}
+                    />
+                </div>
+            ))}
+        </div>
+    );
+};
+
+const getSpeakerPeople = (speaker: SpeakerEntry): SpeakerPerson[] => {
+    if ('people' in speaker && Array.isArray(speaker.people)) {
+        return speaker.people;
+    }
+
+    return [{ name: speaker.name, role: speaker.role }];
+};
+
+const SpeakerDetails = ({
+    speaker,
+    inverted = false,
+    compact = false,
+}: {
+    speaker: SpeakerEntry;
+    inverted?: boolean;
+    compact?: boolean;
+}) => {
+    const people = getSpeakerPeople(speaker);
+    const wrapperClass = people.length > 1 ? 'grid grid-cols-2 gap-3 w-full' : 'w-full';
+    const nameClass = inverted
+        ? `${compact ? 'text-[11px]' : 'text-[13px] md:text-[15px]'} font-bold uppercase tracking-wide leading-tight text-white`
+        : `${compact ? 'text-[11px]' : 'text-[14px] md:text-[16px]'} font-bold uppercase tracking-wide leading-tight text-inamice-orange`;
+    const roleClass = inverted
+        ? `${compact ? 'text-[9px]' : 'text-[10px] md:text-[11px]'} mt-1 text-white/90 leading-tight font-medium`
+        : `${compact ? 'text-[10px]' : 'text-[12px]'} mt-1 text-inamice-blue-3/80 leading-tight font-medium`;
+
+    return (
+        <div className={wrapperClass}>
+            {people.map((person) => (
+                <div key={person.name} className="min-w-0">
+                    <h4 className={nameClass}>{person.name}</h4>
+                    {person.role && person.role !== "TBA" && <p className={roleClass}>{person.role}</p>}
+                </div>
+            ))}
+        </div>
+    );
+};
+
 const Speakers = () => {
     const keynote = SPEAKERS.find(s => s.type === "KEYNOTE SPEECH");
     const plenary1 = SPEAKERS.filter(s => s.type === "PLENARY SESSION 1");
+    const plenary1Feature = plenary1[0];
+    const plenary1Rest = plenary1.slice(1);
     const plenary2 = SPEAKERS.filter(s => s.type === "PLENARY SESSION 2");
 
     return (
@@ -117,7 +192,7 @@ const Speakers = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[3.5rem] rounded-bl-[3.5rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] rounded-tl-none rounded-br-none" />
                             {/* The Inner "Gap" and Image Box */}
                             <div className="absolute inset-[5px] md:inset-[6px] bg-white rounded-tr-[calc(3.5rem-5px)] rounded-bl-[calc(3.5rem-5px)] md:rounded-tr-[calc(5rem-6px)] md:rounded-bl-[calc(5rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                <SpeakerImage src={keynote?.image} alt={keynote?.name} />
+                                <SpeakerImageGroup src={keynote?.image} alt={keynote?.name} />
                             </div>
                         </div>
                         <h4 className="text-2xl md:text-3xl font-extrabold text-inamice-blue-3 mt-2 md:mt-4">{keynote?.name}</h4>
@@ -143,12 +218,35 @@ const Speakers = () => {
                     </p>
 
                     {/* Desktop: Original 3-column grid */}
-                    <div className="hidden md:grid md:grid-cols-3 gap-16 w-full max-w-7xl mx-auto">
-                        {plenary1.map((speaker, idx) => (
+                    <div className="hidden md:flex md:flex-col gap-16 w-full max-w-7xl mx-auto">
+                        {plenary1Feature && (
+                            <div className="flex flex-col items-center w-full">
+                                <div className="bg-inamice-orange text-white px-8 py-2 text-center shadow-md mb-6">
+                                    <h4 className="text-xl font-bold uppercase drop-shadow-md tracking-widest whitespace-nowrap">SUBTOPIC 1</h4>
+                                </div>
+                                <p className="text-inamice-blue-3 text-[18px] font-bold leading-snug max-w-4xl mx-auto mb-8">
+                                    &quot;{plenary1Feature.topic}&quot;
+                                </p>
+                                <div className="flex flex-col items-center">
+                                    <div className="relative w-[680px] h-[380px] mb-6">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-none rounded-br-none" />
+                                        <div className="absolute inset-[6px] bg-white rounded-tr-[calc(4rem-6px)] rounded-bl-[calc(4rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
+                                            <SpeakerImageGroup src={plenary1Feature.image} alt={plenary1Feature.name} />
+                                        </div>
+                                    </div>
+                                    <div className="w-[680px] bg-inamice-orange text-white py-3 px-4 mb-4 text-center min-h-[60px] flex flex-col justify-center">
+                                        <SpeakerDetails speaker={plenary1Feature} inverted />
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        <div className="grid grid-cols-2 gap-16 w-full max-w-5xl mx-auto">
+                            {plenary1Rest.map((speaker, idx) => (
                             <div key={speaker.name} className="flex flex-col items-center flex-1 h-full">
                                 <div className="h-[60px] flex items-center justify-center w-full mb-2">
                                     <div className="bg-inamice-orange text-white px-8 py-2 text-center shadow-md">
-                                        <h4 className="text-xl font-bold uppercase drop-shadow-md tracking-widest whitespace-nowrap">SUBTOPIC {idx + 1}</h4>
+                                        <h4 className="text-xl font-bold uppercase drop-shadow-md tracking-widest whitespace-nowrap">SUBTOPIC {idx + 2}</h4>
                                     </div>
                                 </div>
                                 <div className="px-2 text-center mb-6 h-[100px] flex items-center justify-center w-full">
@@ -158,29 +256,29 @@ const Speakers = () => {
                                     <div className="relative w-[280px] h-[350px] mb-6">
                                         <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[6px] bg-white rounded-tr-[calc(4rem-6px)] rounded-bl-[calc(4rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            <SpeakerImage src={speaker.image} alt={speaker.name} />
+                                            <SpeakerImageGroup src={speaker.image} alt={speaker.name} />
                                         </div>
                                     </div>
                                     <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center min-h-[60px] flex flex-col justify-center">
-                                        <h4 className="text-[14px] md:text-[16px] font-bold uppercase tracking-wide whitespace-normal leading-tight">{speaker.name}</h4>
-                                        {speaker.role && speaker.role !== "TBA" && <p className="text-[12px] mt-1 text-white/90 leading-tight">{speaker.role}</p>}
+                                        <SpeakerDetails speaker={speaker} inverted />
                                     </div>
                                     <div className="h-4"></div>
                                 </div>
                             </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
 
                     {/* Mobile: Compact horizontal cards */}
                     <div className="md:hidden flex flex-col gap-4 w-full">
                         {plenary1.map((speaker, idx) => (
                             <div key={speaker.name} className="p-[3px] bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[2rem] rounded-bl-[2rem] rounded-tl-sm rounded-br-sm shadow-md">
-                                <div className="bg-white rounded-tr-[calc(2rem-3px)] rounded-bl-[calc(2rem-3px)] rounded-tl-none rounded-br-none p-4 flex gap-4 items-center">
+                                <div className={`bg-white rounded-tr-[calc(2rem-3px)] rounded-bl-[calc(2rem-3px)] rounded-tl-none rounded-br-none p-4 ${idx === 0 ? 'flex flex-col gap-4' : 'flex gap-4 items-center'}`}>
                                     {/* Left: Compact Photo */}
-                                    <div className="relative w-[90px] h-[110px] flex-shrink-0">
+                                    <div className={`relative flex-shrink-0 ${idx === 0 ? 'w-full h-[220px]' : 'w-[90px] h-[110px]'}`}>
                                         <div className="absolute inset-0 bg-gradient-to-b from-inamice-blue to-inamice-orange rounded-tr-[1.2rem] rounded-bl-[1.2rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[3px] bg-white rounded-tr-[calc(1.2rem-3px)] rounded-bl-[calc(1.2rem-3px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            <SpeakerImage src={speaker.image} alt={speaker.name} compact />
+                                            <SpeakerImageGroup src={speaker.image} alt={speaker.name} compact />
                                         </div>
                                     </div>
                                     {/* Right: Info */}
@@ -191,8 +289,7 @@ const Speakers = () => {
                                         <p className="text-inamice-blue-3 text-[13px] font-bold leading-snug mb-2 line-clamp-3">
                                             &quot;{speaker.topic}&quot;
                                         </p>
-                                        <p className="text-inamice-orange text-[11px] font-bold uppercase tracking-wide leading-tight">{speaker.name}</p>
-                                        {speaker.role && speaker.role !== "TBA" && <p className="text-inamice-blue-3/80 text-[10px] mt-0.5">{speaker.role}</p>}
+                                        <SpeakerDetails speaker={speaker} compact />
                                     </div>
                                 </div>
                             </div>
@@ -228,12 +325,11 @@ const Speakers = () => {
                                     <div className="relative w-[280px] h-[350px] mb-6">
                                         <div className="absolute inset-0 bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[6px] bg-white rounded-tr-[calc(4rem-6px)] rounded-bl-[calc(4rem-6px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            <SpeakerImage src={speaker.image} alt={speaker.name} />
+                                            <SpeakerImageGroup src={speaker.image} alt={speaker.name} />
                                         </div>
                                     </div>
                                     <div className="w-[280px] bg-inamice-orange text-white py-3 px-2 mb-4 text-center min-h-[60px] flex flex-col justify-center">
-                                        <h4 className="text-[14px] md:text-[16px] font-bold uppercase tracking-wide whitespace-normal leading-tight">{speaker.name}</h4>
-                                        {speaker.role && speaker.role !== "TBA" && <p className="text-[12px] mt-1 text-white/90 leading-tight">{speaker.role}</p>}
+                                        <SpeakerDetails speaker={speaker} inverted />
                                     </div>
                                     <div className="h-4"></div>
                                 </div>
@@ -250,7 +346,7 @@ const Speakers = () => {
                                     <div className="relative w-[90px] h-[110px] flex-shrink-0">
                                         <div className="absolute inset-0 bg-gradient-to-b from-inamice-blue to-inamice-orange rounded-tr-[1.2rem] rounded-bl-[1.2rem] rounded-tl-none rounded-br-none" />
                                         <div className="absolute inset-[3px] bg-white rounded-tr-[calc(1.2rem-3px)] rounded-bl-[calc(1.2rem-3px)] rounded-tl-none rounded-br-none overflow-hidden flex items-center justify-center">
-                                            <SpeakerImage src={speaker.image} alt={speaker.name} compact />
+                                            <SpeakerImageGroup src={speaker.image} alt={speaker.name} compact />
                                         </div>
                                     </div>
                                     {/* Right: Info */}
@@ -261,8 +357,7 @@ const Speakers = () => {
                                         <p className="text-inamice-blue-3 text-[13px] font-bold leading-snug mb-2 line-clamp-3">
                                             &quot;{speaker.topic}&quot;
                                         </p>
-                                        <p className="text-inamice-orange text-[11px] font-bold uppercase tracking-wide leading-tight">{speaker.name}</p>
-                                        {speaker.role && speaker.role !== "TBA" && <p className="text-inamice-blue-3/80 text-[10px] mt-0.5">{speaker.role}</p>}
+                                        <SpeakerDetails speaker={speaker} compact />
                                     </div>
                                 </div>
                             </div>

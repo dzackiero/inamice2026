@@ -18,7 +18,7 @@ const EventProfile = () => {
                     {/* Right Cards */}
                     <div className="md:w-3/4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-4 md:gap-6">
                         {/* Card 1: Title */}
-                        <div className="p-[4px] md:p-[5px] bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-[1.25rem] md:rounded-[1.5rem] shadow-sm">
+                        <div className="p-[4px] md:p-[5px] bg-linear-to-r from-inamice-blue to-inamice-orange rounded-[1.25rem] md:rounded-3xl shadow-sm">
                             <div className="bg-white rounded-[calc(1.25rem-4px)] md:rounded-[calc(1.5rem-5px)] p-5 sm:p-5 md:p-6 lg:p-8 flex flex-col items-center text-center h-full min-h-[100px] md:min-h-[160px]">
                                 <h3 className="text-lg sm:text-base md:text-xl lg:text-2xl font-extrabold text-inamice-blue-3 mb-2 uppercase tracking-wider">TITLE</h3>
                                 <div className="flex-1 flex items-center justify-center w-full">
@@ -28,7 +28,7 @@ const EventProfile = () => {
                         </div>
 
                         {/* Card 2: Themes */}
-                        <div className="p-[4px] md:p-[5px] bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-[1.25rem] md:rounded-[1.5rem] shadow-sm">
+                        <div className="p-[4px] md:p-[5px] bg-linear-to-r from-inamice-blue to-inamice-orange rounded-[1.25rem] md:rounded-3xl shadow-sm">
                             <div className="bg-white rounded-[calc(1.25rem-4px)] md:rounded-[calc(1.5rem-5px)] p-5 sm:p-5 md:p-6 lg:p-8 flex flex-col items-center text-center h-full min-h-[100px] md:min-h-[160px]">
                                 <h3 className="text-lg sm:text-base md:text-xl lg:text-2xl font-extrabold text-inamice-blue-3 mb-2 uppercase tracking-wider">THEMES</h3>
                                 <div className="flex-1 flex items-center justify-center w-full">
@@ -40,7 +40,7 @@ const EventProfile = () => {
                         </div>
 
                         {/* Card 3: Date */}
-                        <div className="p-[4px] md:p-[5px] bg-gradient-to-r from-inamice-blue to-inamice-orange rounded-[1.25rem] md:rounded-[1.5rem] shadow-sm">
+                        <div className="p-[4px] md:p-[5px] bg-linear-to-r from-inamice-blue to-inamice-orange rounded-[1.25rem] md:rounded-3xl shadow-sm">
                             <div className="bg-white rounded-[calc(1.25rem-4px)] md:rounded-[calc(1.5rem-5px)] p-5 sm:p-5 md:p-6 lg:p-8 flex flex-col items-center text-center h-full min-h-[100px] md:min-h-[160px]">
                                 <h3 className="text-lg sm:text-base md:text-xl lg:text-2xl font-extrabold text-inamice-blue-3 mb-2 uppercase tracking-wider">DATE</h3>
                                 <div className="flex-1 flex items-center justify-center w-full">
@@ -56,24 +56,24 @@ const EventProfile = () => {
                     {/* Supported By */}
                     <div className="flex flex-col items-center">
                         <h3 className="text-sm md:text-base lg:text-2xl font-extrabold text-inamice-blue-3 mb-3 md:mb-4 uppercase tracking-wider text-center">SUPPORTED BY</h3>
-                        <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
-                            <img src="https://cdn.inamice.net/assets/partners/supporters_inamice2026.png" alt="Supported By" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
+                        <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-3xl rounded-bl-3xl md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
+                            <img src="https://cdn.inamice.net/assets/partners/supporters_inamice2026.png" alt="Supported By" className="w-full h-full object-contain scale-150 md:scale-125" />
                         </div>
                     </div>
 
                     {/* Sponsored By */}
                     <div className="flex flex-col items-center">
                         <h3 className="text-sm md:text-base lg:text-2xl font-extrabold text-inamice-blue-3 mb-3 md:mb-4 uppercase tracking-wider text-center">SPONSORED BY</h3>
-                        <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
-                            <img src="https://cdn.inamice.net/assets/partners/sponsors_inamice2026.png" alt="Sponsored By" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
+                        <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm `rounded-tr-3xl rounded-bl-3xl md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
+                            <img src="https://cdn.inamice.net/assets/partners/sponsors_inamice2026.png" alt="Sponsored By" className="w-full h-full object-contain scale-150 md:scale-125" />
                         </div>
                     </div>
 
                     {/* Media Partner */}
                     <div className="flex flex-col items-center">
                         <h3 className="text-sm md:text-base lg:text-2xl font-extrabold text-inamice-blue-3 mb-3 md:mb-4 uppercase tracking-wider text-center">MEDIA PARTNER</h3>
-                        <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
-                            <img src="https://cdn.inamice.net/assets/partners/media_partner_inamice2026.png" alt="Media Partner" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
+                        <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-3xl rounded-bl-3xl md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
+                            <img src="https://cdn.inamice.net/assets/partners/media_partner_inamice2026.png" alt="Media Partner" className="w-full h-full object-contain scale-150 md:scale-125" />
                         </div>
                     </div>
                 </div>

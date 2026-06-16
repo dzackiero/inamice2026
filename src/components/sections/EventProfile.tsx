@@ -57,7 +57,7 @@ const EventProfile = () => {
                     <div className="flex flex-col items-center">
                         <h3 className="text-sm md:text-base lg:text-2xl font-extrabold text-inamice-blue-3 mb-3 md:mb-4 uppercase tracking-wider text-center">SUPPORTED BY</h3>
                         <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
-                            <img src="https://cdn.inamice.net/assets/supportby_inamice2026-supporters.png" alt="Supported By" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
+                            <img src="https://cdn.inamice.net/assets/partners/supporters_inamice2026.png" alt="Supported By" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@ const EventProfile = () => {
                     <div className="flex flex-col items-center">
                         <h3 className="text-sm md:text-base lg:text-2xl font-extrabold text-inamice-blue-3 mb-3 md:mb-4 uppercase tracking-wider text-center">SPONSORED BY</h3>
                         <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
-                            <img src="https://cdn.inamice.net/assets/sponsoredby_inamice2026-sponsors.png" alt="Sponsored By" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
+                            <img src="https://cdn.inamice.net/assets/partners/sponsors_inamice2026.png" alt="Sponsored By" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@ const EventProfile = () => {
                     <div className="flex flex-col items-center">
                         <h3 className="text-sm md:text-base lg:text-2xl font-extrabold text-inamice-blue-3 mb-3 md:mb-4 uppercase tracking-wider text-center">MEDIA PARTNER</h3>
                         <div className="w-full h-36 md:h-60 lg:h-64 border-[3px] border-inamice-orange rounded-tl-sm rounded-br-sm rounded-tr-[1.5rem] rounded-bl-[1.5rem] md:rounded-tr-[2.5rem] md:rounded-bl-[2.5rem] bg-white flex items-center justify-center p-2 md:p-4 overflow-hidden">
-                            <img src="https://cdn.inamice.net/assets/mediapartner_%20inamice2026-medias.png" alt="Media Partner" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
+                            <img src="https://cdn.inamice.net/assets/partners/media_partner_inamice2026.png" alt="Media Partner" className="w-full h-full object-contain scale-110 md:scale-125 lg:scale-150" />
                         </div>
                     </div>
                 </div>
